@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links of the page</title>
+    <link rel="stylesheet" href="links1.css">
+</head>
+
+<body>
+    <!-- <h1>COLLEGE WORK</h1>
+    <ol>
+    <li><a href="LINKSq.html" target="framset">LINKING TAGS</a></li>
+    <li><a href="FROMATTING.html" target="framset">FORMATTING TAGS</a></li>
+    <li><a href="umordered.html" target="framset">UNORDERED LISTS</a></li>
+    <li> <a href="orderd.html" target="framset">ORDERED LISTS</a></li>
+    <li><a href="define.html" target="framset">DEFINATION LISTS</a></li>
+    <li> <a href="table.html" target="framset">TIME TABLE</a></li>
+    <li><a href="imagemapping.html" target="framset">IMAGE MAPPING</a></li>
+    <li> <a href="CALENDER.html" target="framset">CALENDER</a></li>
+    <li> <a href="linksinhtml.html" target="framset">LINKING USING ID AND
+        EXTERNAL LINKING</a></li>
+    </ol> -->
+    <!-- <h1>COLLEGE WORK</h1>
+    <ol>
+        <li><a href="LINKSq.html" onclick="openlink('LINKSq.html')">LINKING TAGS</a></li>
+        <li><a href="FROMATTING.html" onclick="openlink('FROMATTING.html')">FORMATTING TAGS</a></li>
+        <li><a href="umordered.html" onclick="openlink('umordered.html')">UNORDERED LISTS</a></li>
+        <li> <a href="orderd.html" onclick="openlink('orderd.html')">ORDERED LISTS</a></li>
+        <li><a href="define.html" onclick="openlink('define.html')">DEFINATION LISTS</a></li>
+        <li> <a href="table.html" onclick="openlink('table.html')">TIME TABLE</a></li>
+        <li><a href="imagemapping.html" onclick="openlink('imagemapping.html')">IMAGE MAPPING</a></li>
+        <li> <a href="CALENDER.html" onclick="openlink('CALENDER.html')">CALENDER</a></li>
+        <li> <a href="linksinhtml.html" onclick="openlink('linksinhtml.html')">LINKING USING ID AND
+                EXTERNAL LINKING</a></li>
+    </ol>
+    <script>
+        function openlink(link) {
+            var frame = document.getElementsByClassName('frame2');
+
+            fetch(link)
+                .then(Response => responsive.txt())
+                .then(data => {
+                    frame.innerHTML = data;
+                })
+                .catch(error => {
+                    console.log('error', error);
+                })
+        }
+    </script> -->
+    <h1>COLLEGE WORK</h1>
+<ol>
+    <li><a href="LINKSq.html" onclick="openlink('LINKSq.html')" target="_self">LINKING TAGS</a></li>
+    <li><a href="FROMATTING.html" onclick="openlink('FROMATTING.html')" target="_parent">FORMATTING TAGS</a></li>
+    <li><a href="umordered.html" onclick="openlink('umordered.html')" target="_parent">UNORDERED LISTS</a></li>
+    <li><a href="orderd.html" onclick="openlink('orderd.html')" target="_parent">ORDERED LISTS</a></li>
+    <li><a href="define.html" onclick="openlink('define.html')" target="_parent">DEFINATION LISTS</a></li>
+    <li><a href="table.html" onclick="openlink('table.html')" target="_parent">TIME TABLE</a></li>
+    <li><a href="imagemapping.html" onclick="openlink('imagemapping.html')" target="_parent">IMAGE MAPPING</a></li>
+    <li><a href="CALENDER.html" onclick="openlink('CALENDER.html')" target="_parent">CALENDER</a></li>
+    <li><a href="linksinhtml.html" onclick="openlink('linksinhtml.html')" target="_self">LINKING USING ID AND EXTERNAL LINKING</a></li>
+</ol>
+<!-- <script>
+    function openlink(link) {
+        var frame = document.querySelector('.frame2'); // Use querySelector to select the first element with class 'frame2'
+
+        fetch(link)
+            .then(response => response.text()) // Fix the typo here
+            .then(data => {
+                frame.innerHTML = data;
+            })
+            .catch(error => {
+                console.log('error', error);
+            });
+    }
+</script> -->
+<!-- target="_parent" -->
+</body>
+
+</html>

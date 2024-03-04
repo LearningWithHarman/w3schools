@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W3Schools</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="nav">
+      <ul>
+        <li>
+          <div class="left">
+            <img src="./W3Schools_logo.svg.png" class="W3Schools_logo">
+            <span>Tutorials<i class="fa-solid fa-caret-down"></i></span>
+            <span>References<i class="fa-solid fa-caret-down"></i></span>
+            <span>Exercises</span>
+            <span>Sign Up</span>
+          </div>
+        </li>
+        <li>
+          <div class="right">
+            <button class="pro">Pro</button>
+            <button class="getstarted">Get Started</button>
+            <button class="website">Create Website</button>
+            <button class="login">Log In</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="contenter">
+    <ul>
+      <li><i class="fa-solid fa-house"></i></li>
+      <li>HTML</li>
+      <li onclick="loadContent('links1.html', 'frame1')">CSS</li>
+      <li>JAVASCRIPT</li>
+      <li>SQL</li>
+      <li>PYTHON</li>
+      <li>JAVA</li>
+      <li>PHP</li>
+      <li>BOOTSTRAP</li>
+      <li>HOW TO</li>
+      <li>W3.CSS</li>
+      <li>C </li>
+      <li>C++</li>
+      <li>C#</li>
+      <li>REACT</li>
+      <li>R</li>
+    </ul>
+    <div class="button">
+      <i class="fa-solid fa-circle"></i>
+      <i class="fa-solid fa-earth-americas"></i>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    </ul>
+  </div>
+
+
+  <div class="display">
+    <div class="frame1"></div>
+    <div class="frame2"></div>
+</div>
+
+<script>
+  function loadContent(url, frameId) {
+    var targetFrame = document.querySelector('.' + frameId);
+    
+    // Fetch the content of the specified URL
+    fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        // Set the fetched HTML content to the target frame
+        targetFrame.innerHTML = data;
+
+        // Modify links in frame1 to open in frame2
+        if (frameId === 'frame1') {
+          var frame1Links = targetFrame.querySelectorAll('a');
+          frame1Links.forEach(link => {
+            link.addEventListener('click', function(event) {
+              event.preventDefault(); // Prevent default link behavior
+              window.open(link.href, 'frame2'); // Open link in frame2
+            });
+          });
+        }
+      })
+      .catch(error => console.error('Error loading content:', error));
+  }
+</script>
+
+<script>
+  function openlink(link) {
+      var frame = document.querySelector('.frame2'); // Use querySelector to select the first element with class 'frame2'
+
+      fetch(link)
+          .then(response => response.text()) // Fix the typo here
+          .then(data => {
+              frame.innerHTML = data;
+          })
+          .catch(error => {
+              console.log('error', error);
+          });
+  }
+</script>
+</body>
+
+</html>
